@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+:root {
+
+    --fc-main: #EEE2DE;
+    --fc-secondary: #2B2A4C;
+
+    --accent: #EA906C;
+
+    --bgc-main: #B31312;
+
+    --ff-main: "Lato", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-main);
+    background-color: var(--bgc-main);
+}
+
+/* PRIMARY HEADER */
+
+header {
+    background-color: var(--fc-secondary);
+    color: var(--fc-main);
+}
+
+.primary-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo h1 {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.list-items a {
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--fc-main);
+}
+
+.list-items a:hover {
+    color: var(--accent);
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.bars {
+    display: block;
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    background: var(--fc-main);
+}
