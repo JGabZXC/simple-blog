@@ -1,0 +1,62 @@
+:root {
+
+    --fc-main: #EEE2DE;
+    --fc-secondary: #2B2A4C;
+
+    --accent: #EA906C;
+
+    --bgc-main: #B31312;
+
+    --ff-main: "Lato", sans-serif;
+}
+
+.hero-intro h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.flex-layout {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.items {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+
+    background-color: var(--fc-secondary);
+    color: var(--fc-main);
+    padding: 10px;
+}
+
+.item-content h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.item-content p {
+    margin-top: 20px;
+}
+
+.button-con {
+    text-align: right;
+}
+
+.button-con button {
+    border: none;
+    background-color: none;
+}
+
+.button-con button a {
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    color: var(--fc-secondary);
+    background-color: var(--fc-main);
+    padding: 10px 20px;
+    
+}

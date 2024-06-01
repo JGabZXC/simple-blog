@@ -22,11 +22,21 @@ body {
     background-color: var(--bgc-main);
 }
 
+/* GLOBAL */
+img {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto 0 auto;
+    padding: 10px;
+}
+
 /* PRIMARY HEADER */
 
 header {
-    width: 100vw;
-    position: absolute;
     background-color: var(--fc-secondary);
     color: var(--fc-main);
 }
@@ -112,6 +122,6 @@ header {
     }
 
     .nav-list.active {
-        top: 70px;
+        top: 50px;
     }
 }
