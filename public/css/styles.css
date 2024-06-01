@@ -25,15 +25,23 @@ body {
 /* PRIMARY HEADER */
 
 header {
+    width: 100vw;
+    position: absolute;
     background-color: var(--fc-secondary);
     color: var(--fc-main);
 }
 
-.primary-nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 10px 20px;
+    min-height: 70px;
+}
+
+.primary-nav {
+    display: flex;
 }
 
 .logo h1 {
@@ -68,6 +76,42 @@ header {
     display: block;
     height: 3px;
     width: 25px;
-    margin-top: 5px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background: var(--fc-main);
+}
+
+/* MEDIA QUERIES */
+@media (width <= 600px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bars:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bars:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bars:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-list {
+        position: fixed;
+        flex-direction: column;
+        width: 100%;
+        left: 0;
+        top: -100%;
+        text-align: center;
+        background-color: var(--fc-secondary);
+        padding: 20px 0;
+    }
+
+    .nav-list.active {
+        top: 70px;
+    }
 }
