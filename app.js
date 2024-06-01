@@ -39,7 +39,7 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { title, blogPost });
 });
 
-app.get('/pages/:id', (req, res) => {
+app.get('/pages/:id', (req, res) => { // Blog Pages
     const id = parseInt(req.params.id);
     const post = blogPost.find((post) => post.id === id);
     const title = post.title;
@@ -48,6 +48,16 @@ app.get('/pages/:id', (req, res) => {
     } else {
         res.status(404).send('error');
     }
+});
+
+app.get('/blog', (req, res) => {
+  const title = 'Blog';
+  res.render('subs/blog.ejs', { title });
+});
+
+app.get('/about', (req, res) => {
+  const title = 'About'
+  res.render('subs/about.ejs', { title });
 });
 
 // Listening on Port 3000

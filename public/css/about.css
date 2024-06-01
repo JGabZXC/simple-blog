@@ -1,0 +1,33 @@
+:root {
+
+    --fc-main: #EEE2DE;
+    --fc-secondary: #2B2A4C;
+    --fc-secondary-dark: hsl(242, 29%, 5%);
+
+    --accent: #EA906C;
+
+    --bgc-main: #B31312;
+
+    --ff-main: "Lato", sans-serif;
+}
+
+.about-container {
+    max-width: 80%;
+    background-color: var(--fc-main);
+}
+
+.about-hero-intro h1 {
+    font-size: 3.5rem;
+    color: var(--fc-secondary);
+}
+
+.about-hero-intro p {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+@media (width <= 600px) {
+    .hero-intro {
+        text-align: left;
+    }
+}

@@ -1,8 +1,81 @@
+:root {
+
+    --fc-main: #EEE2DE;
+    --fc-secondary: #2B2A4C;
+    --fc-secondary-dark: hsl(242, 29%, 5%);
+
+    --accent: #EA906C;
+
+    --bgc-main: #B31312;
+
+    --ff-main: "Lato", sans-serif;
+}
+
 .img-con img{
-    height: 400px;
+    max-height: 450px;
 }
 
 .article-container {
     max-width: 60%;
-    height: 100vh;
+    padding: 0;
+    background-color: var(--fc-secondary-dark);
+}
+
+.article-title h1, 
+.article-message h2,
+.article-message p {
+    color: hsl(15, 32%, 50%);
+}
+
+.article-title p,
+.article-message p {
+    color: var(--fc-main);
+    font-size: 1.25rem;
+}
+
+.title-sub {
+    padding: 0 10px;
+}
+
+.article-title h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.article-message > .article-message-main-sub {
+    margin-top: 30px;
+}
+
+/* .article-message .article-message-main-sub:nth-child(1) {
+    margin-top: 50px;
+} */
+
+.article-message > .article-message-main-sub:nth-child(odd) {
+    background-color: hsl(242, 29%, 20%);
+}
+
+.sub-sub-con {
+    padding: 10px 10px;
+}
+
+.sub-sub-con p {
+    margin-top: 8px;
+}
+
+.article-container ol, 
+.article-container ul {
+    color: var(--fc-main);
+    margin-left: 25px;
+}
+
+.article-container ol span,
+.article-container ul span {
+    color: hsl(15, 32%, 50%);
+}
+
+@media (width <= 600px) {
+    .article-container {
+        max-width: 100%;
+    }
 }

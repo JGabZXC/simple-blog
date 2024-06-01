@@ -43,12 +43,14 @@
 }
 
 .button-con {
+    margin-top: 20px;
     text-align: right;
 }
 
 .button-con button {
     border: none;
-    background-color: none;
+    background-color: transparent;
+    font-family: var(--ff-main);
 }
 
 .button-con button a {
@@ -56,7 +58,19 @@
     text-decoration: none;
     border: none;
     color: var(--fc-secondary);
-    background-color: var(--fc-main);
+    background-color: var(--accent);
     padding: 10px 20px;
-    
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 18px;
+}
+
+.button-con button a:hover {
+    background-color: var(--fc-main);
+}
+
+@media (width <= 600px) {
+    .hero-intro {
+        text-align: center;
+    }
 }

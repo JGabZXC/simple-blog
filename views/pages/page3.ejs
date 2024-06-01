@@ -1,0 +1,98 @@
+<article class="container article-container">
+    <div class="img-con">
+        <img src="/img/fractals.webp"
+            alt="Quantum Teleportation — Scientists Teleported Quantum Data over 60 Miles">
+    </div>
+    <% if(locals.blogPost) { %>
+        <div class="article-title">
+            <div class="title-sub">
+                <h1>
+                    <%= post.title %>
+                </h1>
+                <p>
+                    <%= post.preview %>
+                </p>
+            </div>
+        </div>
+        <div class="article-message">
+            <div class="article-message-main-sub">
+                <div class="sub-sub-con">
+                    <h2>What Are Fractals?</h2>
+                    <p>Fractals are geometric shapes that repeat themselves infinitely when you zoom in. They defy
+                        traditional Euclidean geometry by having fractional dimensions—hence the name “fractal.” Here
+                        are some iconic examples:</p>
+                    <ol>
+                        <li><span>The Koch Snowflake</span>: Start with an equilateral triangle. Replace the middle
+                            third of each side with an outward-facing equilateral triangle. Repeat this process
+                            infinitely. The result? A snowflake with infinite complexity.</li>
+                        <li><span>The Sierpinski Triangle</span>: Begin with an equilateral triangle. Remove the central
+                            triangle, leaving three smaller triangles. Repeat this process for each remaining triangle.
+                            The pattern emerges—a self-replicating Sierpinski triangle.</li>
+                        <li><span>The Mandelbrot Set</span>: Ahis one’s a bit different. It’s not a shape you draw; it’s
+                            a set of complex numbers. Plot each complex number based on a specific mathematical rule.
+                            The result is a breathtaking fractal with intricate islands and filaments.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="article-message-main-sub">
+                <div class="sub-sub-con">
+                    <h2>Fractal Dimensions</h2>
+                    <p>Fractals challenge our understanding of dimensionality. A line has one dimension, a plane has
+                        two, and space has three. But what about fractals? Their dimension lies between integers. For
+                        example:</p>
+                    <ul>
+                        <li>The Koch snowflake has a dimension of approximately 1.26.</li>
+                        <li>The Sierpinski triangle also has a dimension around 1.58.</li>
+                        <li>The Mandelbrot set’s dimension is a mind-boggling 2 (yes, it’s a plane!).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article-message-main-sub">
+                <div class="sub-sub-con">
+                    <h2>Creating Fractals</h2>
+                    <p>You don’t need fancy software to explore fractals. Here’s how you can create your own:
+                    </p>
+                    <ol>
+                        <li><span>Recursive Algorithms</span>: Use recursion to generate fractals. Start with a basic
+                            shape, apply a transformation, and repeat it on smaller parts. The magic lies in the
+                            repetition.</li>
+                        <li><span>Escape-Time Algorithms</span>: For fractals like the Mandelbrot set, iterate complex
+                            numbers and check if they “escape” to infinity. Color the points based on how quickly they
+                            escape.</li>
+                        <li><span>L-Systems</span>: These are string rewriting systems. Start with an axiom (a string)
+                            and apply rules to replace characters. L-Systems create beautiful plant-like fractals.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="article-message-main-sub">
+                <div class="sub-sub-con">
+                    <h2>Art and Inspiration</h2>
+                    <p>Fractals have inspired artists, musicians, and writers. They evoke a sense of infinity, mystery,
+                        and beauty. Whether you’re exploring the coastline of a Julia set or losing yourself in the
+                        spirals of a fern leaf, fractals invite wonder.
+                    </p>
+                </div>
+            </div>
+
+            <div class="article-message-main-sub">
+                <div class="sub-sub-con">
+                    <h2>Conclusion</h2>
+                    <p>Fractals remind us that simplicity and complexity coexist. They blur the line between mathematics
+                        and aesthetics. So next time you see a snowflake or gaze at the Mandelbrot set, remember—you’re
+                        glimpsing infinity.
+                    </p>
+                    <p>Stay curious, fellow fractal explorer! 🌀🌟</p>
+                </div>
+            </div>
+
+        </div>
+        <% } else { %>
+            <h1>nothing to see here. <a href="/">Go back</a></h1>
+            <% } %>
+
+</article>
