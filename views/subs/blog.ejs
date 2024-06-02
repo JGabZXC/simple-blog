@@ -1,1 +1,24 @@
-<h1>IN DEVELOPMENT!</h1>
+<section>
+    <div class="container">
+        <div class="hero-intro">
+            <h1>Globe Trotter Gazette</h1>
+        </div>
+        <div class="content flex-layout">
+            <% if(locals.blogPost) { %>
+                <% blogPost.forEach((post) => { %>
+                    <div class="items">
+                        <div class="item-content">
+                            <h2><%= post.title %></h2>
+                            <p><%= post.preview %></p>
+                        </div>
+                        <div class="button-con">
+                            <button><a href="blog/pages/<%= post.id %>">View</a></button>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <h1>Nothing to see here <a href="/">Go Home</a></h1>
+            <% } %>
+        </div>
+    </div>
+</section>

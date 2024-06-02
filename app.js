@@ -21,8 +21,9 @@ const blogPost = [
   {
     id: 3,
     title: "The Beauty of Fractals: A Journey into Infinite Complexity",
-    preview: "Fractals are captivating mathematical objects that exhibit self-similarity at different scales. From the intricate patterns of a snowflake to the mesmerizing shapes of the Mandelbrot set, fractals reveal a hidden order within chaos. Join me on a journey into the world of fractals—a place where mathematics meets art.",
-  }
+    preview:
+      "Fractals are captivating mathematical objects that exhibit self-similarity at different scales. From the intricate patterns of a snowflake to the mesmerizing shapes of the Mandelbrot set, fractals reveal a hidden order within chaos. Join me on a journey into the world of fractals—a place where mathematics meets art.",
+  },
 ];
 
 // Static
@@ -39,25 +40,25 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { title, blogPost });
 });
 
-app.get('/pages/:id', (req, res) => { // Blog Pages
-    const id = parseInt(req.params.id);
-    const post = blogPost.find((post) => post.id === id);
-    const title = post.title;
-    if(post) {
-        res.render(`pages/page${post.id}.ejs`, { title, blogPost, post });
-    } else {
-        res.status(404).send('error');
-    }
+app.get("/blog", (req, res) => {
+  const title = "Blog";
+  res.render("subs/blog.ejs", { title, blogPost });
 });
 
-app.get('/blog', (req, res) => {
-  const title = 'Blog';
-  res.render('subs/blog.ejs', { title });
+app.get("/blog/pages/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const post = blogPost.find((post) => post.id === id);
+  const title = post.title;
+  if (post) {
+    res.render(`pages/page${post.id}.ejs`, { title, blogPost, post });
+  } else {
+    res.status(404).send("error");
+  }
 });
 
-app.get('/about', (req, res) => {
-  const title = 'About'
-  res.render('subs/about.ejs', { title });
+app.get("/about", (req, res) => {
+  const title = "About";
+  res.render("subs/about.ejs", { title });
 });
 
 // Listening on Port 3000
