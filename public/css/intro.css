@@ -1,0 +1,64 @@
+:root {
+
+    --fc-main: #EEE2DE;
+    --fc-secondary: #2B2A4C;
+
+    --accent: #EA906C;
+
+    --bgc-main: #B31312;
+
+    --ff-main: "Lato", sans-serif;
+}
+
+.introduction {
+    margin-top: 15%;
+    max-width: 80%;
+    padding: 5rem;
+    background-color: var(--fc-secondary);
+    color: var(--fc-main);
+    border-radius: 40px;
+}
+
+.welcome {
+    font-size: 2rem;
+}
+
+.button-con-intro {
+    margin-top: 80px;
+}
+
+.button-con-intro a {
+    text-decoration: none;
+    color: var(--fc-main);
+    background-color: var(--accent);
+    font-size: 1.5rem;
+    padding: 20px 40px;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: 0.5s ease;
+}
+
+.button-con-intro a:hover {
+    background-color: var(--bgc-main);
+}
+
+@media (width <= 600px) {
+    .introduction {
+        margin-top: 0;
+        max-width: 100%;
+        border-radius: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .welcome {
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    .button-con-intro a {
+        font-size: 1rem;
+    }
+}
