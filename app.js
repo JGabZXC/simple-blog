@@ -45,7 +45,7 @@ app.get("/blog", (req, res) => {
   res.render("subs/blog.ejs", { title, blogPost });
 });
 
-app.get("/blog/pages/:id", (req, res) => {
+app.get("/blog/pages/:id", (req, res) => { // Route to Designated Blog Post
   const id = parseInt(req.params.id);
   const post = blogPost.find((post) => post.id === id);
   const title = post.title;
